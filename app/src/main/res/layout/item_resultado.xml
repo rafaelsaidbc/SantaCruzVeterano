@@ -9,14 +9,20 @@
     android:background="@color/colorPrimary"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/jogoNumeroResultado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/idJogoResultado"
+            android:layout_alignBottom="@+id/idJogoResultado"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_weight="0"
             android:gravity="bottom"
             android:text="Jogo "
@@ -26,11 +32,23 @@
             android:id="@+id/idJogoResultado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/jogoNumeroResultado"
+            android:layout_toRightOf="@+id/jogoNumeroResultado"
             android:layout_weight="0"
             android:gravity="bottom"
             android:textAppearance="?android:attr/textAppearanceSmall"
             tools:text="20" />
-    </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/shareItemResultado2017"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="false"
+            android:baselineAlignBottom="false"
+            android:src="@drawable/ic_share_black_24dp" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/data_resultado"

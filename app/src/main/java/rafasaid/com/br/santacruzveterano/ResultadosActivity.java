@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -25,6 +26,9 @@ public class ResultadosActivity extends AppCompatActivity {
 
     private ListView mResultadoListView;
     private ResultadoAdapter mResultadoAdapter;
+
+    //cria a variável para o button e inicializá-lo
+    private ImageButton mBtnShareItemResultado2017;
 
     // Firebase instance variables
     private FirebaseDatabase mFirebaseDatabase;//ponto de acesso do app ao Database
@@ -69,6 +73,7 @@ public class ResultadosActivity extends AppCompatActivity {
 
         // Inicializa as referências das Views
         mResultadoListView = (ListView) findViewById(R.id.resultadoListView);
+
 
         // Initialize message ListView and its adapter, o ArrayList é a fonte de dados do ResultadoAdapter
         //pelo objeto mResultadoAdapter
